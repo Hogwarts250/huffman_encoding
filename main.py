@@ -1,9 +1,8 @@
 from function import create_encoding_tree, create_individual_values, encode
 import json
 
-f = open("text.txt", "r")
-text = f.read()
-f.close()
+with open("text.txt", "r") as f:
+    text = f.read()
 
 tree = create_encoding_tree(text)
 codes = create_individual_values(tree)
